@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     26.05.2010 13:16                                                        
+
+         
+     Wandelt DOT in PNG.
+                   
+     Hannes John (hjo)                                                                
+     ====================================================================== -->
+<project name="dot2png" default="dot2png">
+	<description>
+            Wandelt DOT in PNG.
+    </description>
+
+	<!-- ================================= 
+          target:               
+         ================================= -->
+	<target name="dot2png" description="Wandelt DOT in PNG.">
+		<exec executable="C:/Program Files/Graphviz2.26.3/bin/dot.exe" dir=".">
+			<arg line="-v -Gcharset=latin1 -Tpng -oselect.png select.dot" />
+		</exec>
+    </target>
+</project>

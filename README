@@ -1,0 +1,7 @@
+Visualize SQL queries to get a better understanding of them, especially when many tables are joined. See example.png for an example.
+
+In contrast to other tools, this one does not need a database connection. It examines queries on a per-string basis and tries to read as much of the database schema from it as possible. My plan is to map the complete relational algebra to it.
+
+The tool to visualize the queries is Graphviz.
+
+An SQL parser is still missing, which is subject to additional development.

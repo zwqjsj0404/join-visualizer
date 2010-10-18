@@ -1,0 +1,30 @@
+graph select {
+	rankdir=LR;
+	node [shape=record, fontname=Arial, fontsize=10];
+	edge [fontname=Arial, fontsize=10];
+	aa [label="ASSORTMENT_AREA aa|<33263331> floor_area_oid\l|<6718604> assortment_area_type_oid\l|<30771886> ah_assignment_oid\l"];
+	fa [label="FLOOR_AREA fa|<6413875> oid\l|<27744459> store_floor_oid\l|<6336176> floor_area_type_oid\l"];
+	sf [label="STORE_FLOOR sf|<28737396> oid\l|<6927154> store_area_oid\l"];
+	sa [label="STORE_AREA sa|<24355087> oid\l|<5442986> store_oid\l|<9023134> planning_period_oid\l"];
+	s [label="STORE s|<10891203> oid\l"];
+	pp [label="PLANNING_PERIOD pp|<19336051> oid\l"];
+	fat [label="FLOOR_AREA_TYPE fat|<23899971> oid\l"];
+	aat [label="ASSORTMENT_AREA_TYPE aat|<8918002> oid\l"];
+	aha [label="AH_ASSIGNMENT aha|<8637543> oid\l|<14718739> ah_item_oid\l"];
+	ahi [label="AH_ITEM ahi|<14577460> oid\l"];
+	aa:33263331 -- fa:6413875 [label="="];
+	fa:27744459 -- sf:28737396 [label="="];
+	sf:6927154 -- sa:24355087 [label="="];
+	sa:5442986 -- s:10891203 [label="="];
+	sa:9023134 -- pp:19336051 [label="="];
+	fa:6336176 -- fat:23899971 [label="="];
+	aa:6718604 -- aat:8918002 [label="="];
+	aa:30771886 -- aha:8637543 [label="="];
+	aha:14718739 -- ahi:14577460 [label="="];
+	constraint4699264 [shape=box, label="s.store_no = 9330"];
+	constraint26954214 [shape=box, label="pp.description = '201309'"];
+	constraint1102920 [shape=box, label="sf.store_floor_code = 'EG'"];
+	constraint14737862 [shape=box, label="fat.description = 'Verkaufsfläche'"];
+	constraint444956 [shape=box, label="aat.description = 'Themenfläche'"];
+	constraint29303146 [shape=box, label="ahi.ah_item_code = '3006'"];
+}
